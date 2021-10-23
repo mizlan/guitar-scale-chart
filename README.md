@@ -1,5 +1,7 @@
 # guitar-scale-chart
 
+![guitar-scale-chart demo](./assets/example.png)
+
 A script to display guitar scales across the fretboard. I made this
 to practice my guitar improvisation, and I hope others find it
 useful.
