@@ -1,6 +1,6 @@
-# guitar-scale-chart
+![banner](./assets/banner.png)
 
-![guitar-scale-chart demo](./assets/example.png)
+# guitar-scale-chart
 
 A script to display guitar scales across the fretboard. I made this
 to practice my guitar improvisation, and I hope others find it
@@ -9,6 +9,8 @@ useful.
 **Note:** Requires `Term::ANSIColor` and `List::MoreUtils`
 
 ## Example usages:
+
+![guitar-scale-chart demo](./assets/example.png)
 
 ```
 perl guitar.pl Db major
