@@ -33,4 +33,4 @@ different degrees of the scale.
 
 ## Alternatives
 
-You can use ![Fretastic in your browser](https://fretastic.com/guitar) but it's not as cool :thinking_face:
+You can use ![Fretastic in your browser](https://fretastic.com/guitar) but it's not as cool :thinking:
