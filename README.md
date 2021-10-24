@@ -30,3 +30,7 @@ You can edit `$num_frets` to change the number of shown frets.
 
 You can also change `@color_config` to use different colors for the
 different degrees of the scale.
+
+## Alternatives
+
+You can use ![Fretastic in your browser](https://fretastic.com/guitar) but it's not as cool :thinking_face:
