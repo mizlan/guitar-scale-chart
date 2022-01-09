@@ -13,6 +13,10 @@ my @flat_keys_minor = qw(D G C F Bb Eb);
 my @flat_keys_major = qw(F Bb Eb Ab Db Gb Cb);
 my @sharp_keys_minor = qw(A E B F# C# G# D#);
 my @sharp_keys_major = qw(C G D A E B F# C#);
+my @fret_marker_locations = qw(3 5 7 9 12 15 17 19 21 24);
+
+# one of 'fret markers' or 'fret numbers'
+my $fret_display_style = 'fret markers';
 
 my @color_config = qw(white red green yellow blue magenta cyan);
 
@@ -65,11 +69,13 @@ if ($major_or_minor eq 'major') {
 
 my @strings_display_order = reverse @strings;
 
-print " ";
-for (0..$num_frets) {
-  printf "%-5s", $_;
+if ($fret_display_style eq 'fret numbers') {
+  print " ";
+  for (0..$num_frets) {
+    printf "%-5s", $_;
+  }
+  print "\n";
 }
-print "\n";
 
 for my $string_index (0..$#strings_display_order) {
   my $string = $strings_display_order[$string_index];
@@ -119,4 +125,18 @@ for my $string_index (0..$#strings_display_order) {
     }
   }
   print "\n";
+}
+
+if ($fret_display_style eq 'fret markers') {
+  print " ";
+  for my $fret_num (0..$num_frets) {
+    if ($fret_num == 12 || $fret_num == 24) {
+      print "\b⬤ ⬤   ";
+    } elsif (grep(/^$fret_num$/, @fret_marker_locations)) {
+      printf "%-7s", "⬤ ";
+    } else {
+      printf "%-5s", "";
+    }
+  }
+  printf "\n";
 }
